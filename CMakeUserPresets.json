@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "Qt-Debug",
+      "inherits": "Qt-Default",
+      "binaryDir": "${sourceDir}/out/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-DQT_QML_DEBUG"
+      },
+      "environment": {
+        "QML_DEBUG_ARGS": "-qmljsdebugger=file:{bd0de788-0413-4f4e-a5df-3bf2e31274de},block"
+      }
+    },
+    {
+      "name": "Qt-Release",
+      "inherits": "Qt-Default",
+      "binaryDir": "${sourceDir}/out/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "hidden": true,
+      "name": "6.7.3_msvc2019_64",
+      "inherits": "Qt",
+      "environment": {
+        "QTDIR": "E:/TOOLS/QT/6.7.3/msvc2019_64"
+      },
+      "architecture": {
+        "strategy": "external",
+        "value": "x64"
+      },
+      "generator": "Ninja",
+      "vendor": {
+        "qt-project.org/Version": {
+          "checksum": "NFb2ba6jAXRFYkBtOT69C42KkN8="
+        }
+      }
+    },
+    {
+      "hidden": true,
+      "name": "6.7.3_msvc2022_64",
+      "inherits": "Qt",
+      "environment": {
+        "QTDIR": "E:/TOOLS/QT/6.7.3/msvc2022_64"
+      },
+      "architecture": {
+        "strategy": "external",
+        "value": "x64"
+      },
+      "generator": "Ninja",
+      "vendor": {
+        "qt-project.org/Version": {
+          "checksum": "Wz8V2wFk1DJEbQjrbHg8+GyJ2Rc="
+        }
+      }
+    },
+    {
+      "hidden": true,
+      "name": "6.7.3_msvc2019",
+      "inherits": "Qt",
+      "environment": {
+        "QTDIR": "E:/TOOLS/QT/6.7.3/msvc2019_64"
+      },
+      "architecture": {
+        "strategy": "external",
+        "value": "x64"
+      },
+      "generator": "Ninja",
+      "vendor": {
+        "qt-project.org/Version": {
+          "checksum": "GZEsM1gp+8T5YR7cASTkt7z3vM4="
+        }
+      }
+    },
+    {
+      "hidden": true,
+      "name": "Qt-Default",
+      "inherits": "6.7.3_msvc2022_64",
+      "vendor": {
+        "qt-project.org/Default": {
+          "checksum": "q6nmFNeoLGVhIvw2RMgt0/VEmVc="
+        }
+      }
+    }
+  ],
+  "vendor": {
+    "qt-project.org/Presets": {
+      "checksum": "XD0sHxuzvdu4TpznlYvWIeipXZs="
+    }
+  }
+}
